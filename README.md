@@ -13,4 +13,18 @@ This shows the statistics that were recorded for the number of iterations (epoch
 
 # Explanation
 This is a project that I was given from a class taken in artificial intelligence and machine learning. The program uses the Keras library to construct the deep Q-Learning algorithm that is used to solve the maze. Much of the project is starter code, with the main development being focused on the qtrain function within 
-Jupyter Notebook file. 
+Jupyter Notebook file.  The TreasureMaze and GameExperience classes were both starter code.
+
+The TreasureMaze object is for tracking the state of the machine and the total rewards it collects as it progresses through the game.
+
+The GameExperience class works with the state data that is collected in the TreasureMaze object that will hold the data in memory for the machine to use in future iterations. 
+
+
+This algorithm relies on the Bellman Optimality Equation shown below.
+
+
+![Screenshot 2023-02-26 213924](https://user-images.githubusercontent.com/89023468/221475756-e668cec8-08ca-4327-a718-02c736375664.png)
+
+
+To summarize, this equation predicts the expected reward for any action taken during any given state throughout the iteration of the game. This equation produces Q-values that are used to make a table, known as a Q-Table, for the machine to reference during each decision. The idea is that these Q-values will indicate to the machine what the optimal decision is at any given state. The higher the Q-value, the higher the expected reward for that action. These Q-values are processed and updated throughout the entirety of the game.
+
